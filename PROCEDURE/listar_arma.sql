@@ -8,7 +8,7 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO;
+GO
 
 CREATE PROCEDURE listar_arma
 AS
@@ -23,4 +23,4 @@ BEGIN
         observacao
     FROM tb_arma;
 END;
-GO;
+GO

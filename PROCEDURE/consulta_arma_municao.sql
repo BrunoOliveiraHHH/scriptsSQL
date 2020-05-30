@@ -8,7 +8,7 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO;
+GO
 
 CREATE PROCEDURE consulta_arma_municao
 AS
@@ -28,4 +28,4 @@ BEGIN
 	FROM tb_arma AS arm
 		INNER JOIN tb_municao AS muni ON arm.municao = muni.id_municao;
 END;
-GO;
+GO

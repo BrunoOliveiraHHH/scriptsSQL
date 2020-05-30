@@ -8,7 +8,7 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO;
+GO
 
 CREATE PROCEDURE adiciona_municao
 	@nome_municao VARCHAR(255),
@@ -33,4 +33,4 @@ BEGIN
 			(@id_municao, @nome_municao, @custo_municao, @calibre_municao, @quantidade_municao, @peso_municao, @observacao_municao);
 	END;
 END;
-GO;
+GO

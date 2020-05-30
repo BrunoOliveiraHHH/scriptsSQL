@@ -8,7 +8,7 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO;
+GO
 
 CREATE PROCEDURE ler_arma_por_id
 	@id_arma INT
@@ -22,7 +22,7 @@ BEGIN
 		arm.propriedade as propriedade_arma,
 		muni.nome as nome_municao,
 		muni.custo as custo_municao,
-		mini.calibre as calibre_municao,
+		muni.calibre as calibre_municao,
 		muni.quantidade as quantidade_municao,
 		muni.observacao as observacao_municao,
 		arm.observacao as observacao_arma
@@ -30,4 +30,4 @@ BEGIN
 		INNER JOIN tb_municao AS muni ON arm.municao = muni.id_municao
 	WHERE id_arma = @id_arma;
 END;
-GO;
+GO

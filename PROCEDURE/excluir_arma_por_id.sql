@@ -8,7 +8,7 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO;
+GO
 
 CREATE PROCEDURE excluir_arma_por_id
     @arma INT
@@ -16,4 +16,4 @@ AS
 BEGIN
     DELETE FROM tb_arma WHERE id_arma = @arma;
 END
-GO;
+GO

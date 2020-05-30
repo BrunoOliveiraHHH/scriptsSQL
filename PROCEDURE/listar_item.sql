@@ -8,7 +8,7 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO;
+GO
 
 CREATE PROCEDURE listar_item
 AS
@@ -20,4 +20,4 @@ BEGIN
         descricao
     FROM tb_item;
 END;
-GO;
+GO

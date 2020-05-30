@@ -8,7 +8,7 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO;
+GO
 
 CREATE PROCEDURE listar_durabilidades
 AS
@@ -16,4 +16,4 @@ BEGIN
     SELECT descricao
     FROM tb_durabilidade;
 END;
-GO;
+GO

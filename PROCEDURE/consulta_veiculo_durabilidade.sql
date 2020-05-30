@@ -8,7 +8,7 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO;
+GO
 
 CREATE PROCEDURE consulta_veiculo_durabilidade
 AS
@@ -21,4 +21,4 @@ BEGIN
 	FROM tb_veiculo AS vei
 		INNER JOIN tb_durabilidade AS durab ON vei.durabilidade = durab.id_durabilidade;
 END;
-GO;
+GO
