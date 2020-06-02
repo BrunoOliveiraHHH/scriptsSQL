@@ -14,7 +14,8 @@ CREATE PROCEDURE ler_arma_por_id
 	@id_arma INT
 AS
 BEGIN
-	SELECT arm.nome as nome_arma,
+	SELECT arm.id_arma as ID,
+		arm.nome as nome_arma,
 		arm.custo as custo_arma,
 		arm.dano as dano_arma,
 		arm.tipo_de_dano as tipo_de_dano_arma,
