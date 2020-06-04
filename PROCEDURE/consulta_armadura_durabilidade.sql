@@ -13,9 +13,10 @@ GO
 CREATE PROCEDURE consulta_armadura_durabilidade
 AS
 BEGIN
-	SELECT armd.nome as nome_armadura,
+	SELECT armd.id_armadura as ID,
+		armd.nome as nome_armadura,
 		armd.tipo as tipo_armadura,
-		armd.custo as custo_veiculo,
+		armd.custo as custo_armadura,
 		armd.ca as ca_armadura,
 		armd.furtv as furtv_armadura,
 		armd.forca as forca_armadura,

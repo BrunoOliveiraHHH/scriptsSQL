@@ -13,7 +13,8 @@ GO
 CREATE PROCEDURE listar_durabilidades
 AS
 BEGIN
-    SELECT descricao
+    SELECT id_durabilidade as ID,
+    descricao as status_durabilidade
     FROM tb_durabilidade;
 END;
 GO

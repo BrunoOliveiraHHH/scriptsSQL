@@ -13,7 +13,8 @@ GO
 CREATE PROCEDURE listar_monstro
 AS
 BEGIN
-    SELECT nome,
+    SELECT id_monstro, 
+        nome,
         tipo,
         tamanho,
         tendencia,
