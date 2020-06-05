@@ -8,12 +8,13 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO;
+GO
 
-CREATE PROCEDURE excluir_arma_por_id
-    @arma INT
+CREATE PROCEDURE listar_nome_id_municao
 AS
 BEGIN
-    DELETE FROM tb_arma WHERE id_arma = @arma;
-END
-GO;
+    SELECT id_municao,
+            nome
+    FROM [dbo].[tb_municao];
+END;
+GO

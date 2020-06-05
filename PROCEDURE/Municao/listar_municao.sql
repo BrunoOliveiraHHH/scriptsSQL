@@ -8,17 +8,18 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO;
+GO
 
-CREATE PROCEDURE listar_acessorio
+CREATE PROCEDURE listar_municao
 AS
 BEGIN
-        SELECT nome,
-                custo,
-                peso,
-                tipo,
-                efeito,
-                observacao
-        FROM tb_acessorio;
+    SELECT id_municao,
+        nome,
+        custo,
+        calibre,
+        quantidade,
+        peso,
+        observacao
+    FROM [dbo].[tb_municao];
 END;
-GO;
+GO

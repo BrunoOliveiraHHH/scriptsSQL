@@ -8,12 +8,12 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO;
+GO
 
-CREATE PROCEDURE listar_durabilidades
+CREATE PROCEDURE excluir_arma_por_id
+    @arma INT
 AS
 BEGIN
-    SELECT descricao
-    FROM tb_durabilidade;
-END;
-GO;
+    DELETE FROM [dbo].[tb_arma] WHERE id_arma = @arma;
+END
+GO

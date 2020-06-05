@@ -8,17 +8,13 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO;
+GO
 
-CREATE PROCEDURE consulta_item_durabilidade
+CREATE PROCEDURE listar_durabilidades
 AS
 BEGIN
-	SELECT item.nome as nome_item,
-		item.custo as custo_item,
-		item.peso as peso_item,
-		item.descricao as descricao_item,
-		durab.descricao as status_durabilidade
-	FROM tb_item AS item
-		INNER JOIN tb_durabilidade AS durab ON item.durabilidade = durab.id_durabilidade;
+    SELECT id_durabilidade,
+    descricao
+    FROM [dbo].[tb_durabilidade];
 END;
-GO;
+GO

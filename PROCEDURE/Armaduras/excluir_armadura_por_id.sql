@@ -8,17 +8,13 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO;
+GO
 
-CREATE PROCEDURE listar_municao
+CREATE PROCEDURE excluir_armadura_por_id
+    @id_armadura INT
 AS
 BEGIN
-    SELECT nome,
-        custo,
-        calibre,
-        quantidade,
-        peso,
-        observacao
-    FROM tb_municao;
+	DELETE FROM [dbo].[tb_armadura]
+    WHERE id_armadura = @id_armadura
 END;
-GO;
+GO

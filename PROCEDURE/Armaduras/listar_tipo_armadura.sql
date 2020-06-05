@@ -8,20 +8,13 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO;
+GO
 
-CREATE PROCEDURE listar_arma
+CREATE PROCEDURE listar_tipo_armadura
 AS
 BEGIN
-    SELECT nome,
-        tipo,
-        custo,
-        ca,
-        furtv,
-        forca,
-        peso,
-        durabilidade,
-        observacao
-    FROM tb_arma;
+    SELECT id_tipo_armadura,
+            nome
+    FROM [dbo].[tb_tipo_armadura];
 END;
-GO;
+GO

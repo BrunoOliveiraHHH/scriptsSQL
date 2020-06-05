@@ -8,16 +8,10 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO;
 
-CREATE PROCEDURE listar_veiculos
-AS
-BEGIN
-        SELECT nome,
-                tipo,
-                custo,
-                velocidade,
-                durabilidade
-        FROM tb_veiculo;
-END;
-GO;
+CREATE TABLE tb_tipo_armadura
+(
+  id_tipo_armadura INT NOT NULL,
+  nome VARCHAR(255) NOT NULL
+  PRIMARY KEY (id_tipo_armadura)
+);

@@ -8,21 +8,24 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO;
+GO
 
-CREATE PROCEDURE consulta_armadura_durabilidade
+CREATE PROCEDURE ler_armadura_por_id
+    @id_armadura INT
 AS
 BEGIN
-	SELECT armd.nome as nome_armadura,
+	SELECT armd.id_armadura as ID,
+		armd.nome as nome_armadura,
 		armd.tipo as tipo_armadura,
-		armd.custo as custo_veiculo,
+		armd.custo as custo_armadura,
 		armd.ca as ca_armadura,
 		armd.furtv as furtv_armadura,
 		armd.forca as forca_armadura,
 		armd.peso as peso_armadura,
 		armd.observacao as observacao_armadura,
 		durab.descricao as status_durabilidade
-	FROM tb_armadura AS armd
-		INNER JOIN tb_durabilidade AS durab ON armd.durabilidade = durab.id_durabilidade;
+	FROM [dbo].[tb_armadura] AS armd
+		INNER JOIN [dbo].[tb_durabilidade] AS durab ON armd.durabilidade = durab.id_durabilidade
+    WHERE armd.id_armadura = @id_armadura
 END;
-GO;
+GO

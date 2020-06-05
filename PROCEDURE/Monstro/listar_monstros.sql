@@ -8,12 +8,13 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO;
+GO
 
 CREATE PROCEDURE listar_monstro
 AS
 BEGIN
-    SELECT nome,
+    SELECT id_monstro, 
+        nome,
         tipo,
         tamanho,
         tendencia,
@@ -36,6 +37,6 @@ BEGIN
         caracteristicas,
         acoes,
         acoeslendarias
-    FROM tb_monstro;
+    FROM [dbo].[tb_monstro];
 END;
-GO;
+GO

@@ -8,7 +8,7 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO;
+GO
 
 CREATE PROCEDURE adiciona_municao
 	@nome_municao VARCHAR(255),
@@ -22,15 +22,15 @@ BEGIN
 	DECLARE @id_municao AS INT;
 	DECLARE @total AS INT;
 	SET @total = (select COUNT(*)
-	from tb_municao);
+	from [dbo].[tb_municao]);
 	SET @id_municao = @total + 1;
 
 	IF (@id_municao <> @total)
 	        BEGIN
-		INSERT INTO  tb_municao
+		INSERT INTO  [dbo].[tb_municao]
 			(id_municao, nome, custo, calibre, quantidade, peso, observacao )
 		VALUES
 			(@id_municao, @nome_municao, @custo_municao, @calibre_municao, @quantidade_municao, @peso_municao, @observacao_municao);
 	END;
 END;
-GO;
+GO

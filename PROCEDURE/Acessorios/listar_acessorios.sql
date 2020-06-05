@@ -8,19 +8,17 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO;
+GO
 
-CREATE PROCEDURE listar_arma
+CREATE PROCEDURE listar_acessorio
 AS
 BEGIN
-    SELECT nome,
-        custo,
-        dano,
-        tipo_de_dano,
-        peso,
-        propriedade,
-        municao,
-        observacao
-    FROM tb_arma;
+        SELECT nome,
+                custo,
+                peso,
+                tipo,
+                efeito,
+                observacao
+        FROM [dbo].[tb_acessorio];
 END;
-GO;
+GO
