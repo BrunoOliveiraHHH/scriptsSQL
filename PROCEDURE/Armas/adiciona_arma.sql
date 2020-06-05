@@ -26,13 +26,13 @@ BEGIN
     DECLARE @total AS INT;
 
     SET @total = (select COUNT(*)
-    from tb_arma);
+    from [dbo].[tb_arma]);
     SET @id_arma = @total + 1;
 
     IF (@id_arma <> @total)
 	    BEGIN
-        INSERT INTO  tb_arma
-            ( id_arma, nome, custo, dano, tipo_de_dano, peso, propriedade, municao, observacao)
+        INSERT INTO  [dbo].[tb_arma]
+            (id_arma, nome, custo, dano, tipo_de_dano, peso, propriedade, municao, observacao)
         VALUES
             (@id_arma, @nome_arma, @custo_arma, @dano_arma, @tipo_de_dano_arma, @peso_arma, @propriedade_arma, @municao_arma, @observacao_arma);
     END;

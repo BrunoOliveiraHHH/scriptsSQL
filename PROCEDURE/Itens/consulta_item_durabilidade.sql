@@ -10,15 +10,15 @@
 USE o_inicio_do_fim_v2;
 GO
 
-CREATE PROCEDURE consulta_veiculo_durabilidade
+CREATE PROCEDURE consulta_item_durabilidade
 AS
 BEGIN
-	SELECT vei.nome as nome_veiculo,
-		vei.tipo as tipo_veiculo,
-		vei.custo as custo_veiculo,
-		vei.velocidade as velocidade_maxima_veiculo,
+	SELECT item.nome as nome_item,
+		item.custo as custo_item,
+		item.peso as peso_item,
+		item.descricao as descricao_item,
 		durab.descricao as status_durabilidade
-	FROM tb_veiculo AS vei
-		INNER JOIN tb_durabilidade AS durab ON vei.durabilidade = durab.id_durabilidade;
+	FROM [dbo].[tb_item] AS item
+		INNER JOIN [dbo].[tb_durabilidade] AS durab ON item.durabilidade = durab.id_durabilidade;
 END;
 GO

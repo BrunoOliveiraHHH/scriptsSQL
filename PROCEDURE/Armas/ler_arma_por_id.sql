@@ -27,8 +27,8 @@ BEGIN
 		muni.quantidade as quantidade_municao,
 		muni.observacao as observacao_municao,
 		arm.observacao as observacao_arma
-	FROM tb_arma AS arm
-		INNER JOIN tb_municao AS muni ON arm.municao = muni.id_municao
+	FROM [dbo].[tb_arma] AS arm
+		INNER JOIN [dbo].[tb_municao] AS muni ON arm.municao = muni.id_municao
 	WHERE id_arma = @id_arma;
 END;
 GO

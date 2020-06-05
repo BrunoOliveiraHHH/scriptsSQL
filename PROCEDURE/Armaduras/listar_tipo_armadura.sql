@@ -10,11 +10,11 @@
 USE o_inicio_do_fim_v2;
 GO
 
-CREATE PROCEDURE listar_nome_id_municao
+CREATE PROCEDURE listar_tipo_armadura
 AS
 BEGIN
-    SELECT id_municao,
+    SELECT id_tipo_armadura,
             nome
-    FROM tb_municao;
+    FROM [dbo].[tb_tipo_armadura];
 END;
 GO

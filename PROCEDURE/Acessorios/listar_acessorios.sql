@@ -10,10 +10,15 @@
 USE o_inicio_do_fim_v2;
 GO
 
-CREATE PROCEDURE excluir_arma_por_id
-    @arma INT
+CREATE PROCEDURE listar_acessorio
 AS
 BEGIN
-    DELETE FROM tb_arma WHERE id_arma = @arma;
-END
+        SELECT nome,
+                custo,
+                peso,
+                tipo,
+                efeito,
+                observacao
+        FROM [dbo].[tb_acessorio];
+END;
 GO

@@ -8,18 +8,10 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO
 
-CREATE PROCEDURE listar_municao
-AS
-BEGIN
-    SELECT id_municao,
-        nome,
-        custo,
-        calibre,
-        quantidade,
-        peso,
-        observacao
-    FROM tb_municao;
-END;
-GO
+CREATE TABLE tb_tipo_armadura
+(
+  id_tipo_armadura INT NOT NULL,
+  nome VARCHAR(255) NOT NULL
+  PRIMARY KEY (id_tipo_armadura)
+);

@@ -10,15 +10,11 @@
 USE o_inicio_do_fim_v2;
 GO
 
-CREATE PROCEDURE consulta_item_durabilidade
+CREATE PROCEDURE excluir_armadura_por_id
+    @id_armadura INT
 AS
 BEGIN
-	SELECT item.nome as nome_item,
-		item.custo as custo_item,
-		item.peso as peso_item,
-		item.descricao as descricao_item,
-		durab.descricao as status_durabilidade
-	FROM tb_item AS item
-		INNER JOIN tb_durabilidade AS durab ON item.durabilidade = durab.id_durabilidade;
+	DELETE FROM [dbo].[tb_armadura]
+    WHERE id_armadura = @id_armadura
 END;
 GO

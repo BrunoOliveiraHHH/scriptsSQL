@@ -10,7 +10,8 @@
 USE o_inicio_do_fim_v2;
 GO
 
-CREATE PROCEDURE consulta_armadura_durabilidade
+CREATE PROCEDURE ler_armadura_por_id
+    @id_armadura INT
 AS
 BEGIN
 	SELECT armd.id_armadura as ID,
@@ -23,7 +24,8 @@ BEGIN
 		armd.peso as peso_armadura,
 		armd.observacao as observacao_armadura,
 		durab.descricao as status_durabilidade
-	FROM tb_armadura AS armd
-		INNER JOIN tb_durabilidade AS durab ON armd.durabilidade = durab.id_durabilidade;
+	FROM [dbo].[tb_armadura] AS armd
+		INNER JOIN [dbo].[tb_durabilidade] AS durab ON armd.durabilidade = durab.id_durabilidade
+    WHERE armd.id_armadura = @id_armadura
 END;
 GO

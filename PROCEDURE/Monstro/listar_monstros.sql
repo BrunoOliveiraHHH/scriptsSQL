@@ -37,6 +37,6 @@ BEGIN
         caracteristicas,
         acoes,
         acoeslendarias
-    FROM tb_monstro;
+    FROM [dbo].[tb_monstro];
 END;
 GO

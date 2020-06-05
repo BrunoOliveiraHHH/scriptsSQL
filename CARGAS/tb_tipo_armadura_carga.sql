@@ -8,17 +8,10 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO
 
-CREATE PROCEDURE listar_acessorio
-AS
-BEGIN
-        SELECT nome,
-                custo,
-                peso,
-                tipo,
-                efeito,
-                observacao
-        FROM tb_acessorio;
-END;
-GO
+INSERT INTO  tb_tipo_armadura
+	( id_tipo_armadura, nome)
+VALUES
+	(1, 'Armaduras Leves'),
+	(2, 'Armaduras Medias'),
+	(3, 'Armaduras Pesadas');
