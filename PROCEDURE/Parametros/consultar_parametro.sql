@@ -10,13 +10,12 @@
 USE o_inicio_do_fim_v2;
 GO
 
-CREATE PROCEDURE listar_nome_id_municao
-@id_municao int
+CREATE PROCEDURE consultar_parametro
+@nom_parametro VARCHAR(255)
 AS
 BEGIN
-    SELECT id_municao,
-            nome
-    FROM [dbo].[tb_municao]
-    WHERE id_municao = @id_municao
-END;
+    SELECT des_parametro
+    FROM [dbo].[tb_parametro]
+    WHERE nom_parametro = @nom_parametro;
+END
 GO

@@ -8,15 +8,12 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO
 
-CREATE PROCEDURE listar_nome_id_municao
-@id_municao int
-AS
-BEGIN
-    SELECT id_municao,
-            nome
-    FROM [dbo].[tb_municao]
-    WHERE id_municao = @id_municao
-END;
-GO
+CREATE TABLE tb_parametro
+(
+  id_parametro INT NOT NULL,
+  nom_parametro VARCHAR(255) NOT NULL,
+  des_parametro VARCHAR(500) NOT NULL,
+  dat_atualizacao DATETIME NOT NULL,
+  PRIMARY KEY ( id_parametro )
+);
