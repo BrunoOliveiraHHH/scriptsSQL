@@ -10,15 +10,12 @@
 USE o_inicio_do_fim_v2;
 GO
 
-CREATE PROCEDURE excluir_municao_por_id
-    @id_municao INT
+CREATE PROCEDURE consultar_parametro
+@nom_parametro VARCHAR(255)
 AS
 BEGIN
-	DELETE FROM [dbo].[tb_municao] 
-<<<<<<< HEAD
-    WHERE id_municao = @id_municao
-=======
-    WHERE id_municao = @id_municao;
->>>>>>> 1d8c3dea48adaa4673734661041462e560c7113d
-END;
+    SELECT des_parametro
+    FROM [dbo].[tb_parametro]
+    WHERE nom_parametro = @nom_parametro;
+END
 GO

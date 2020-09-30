@@ -13,7 +13,7 @@ GO
 CREATE PROCEDURE listar_municao
 AS
 BEGIN
-    SELECT id_municao,
+    SELECT id_municao AS ID,
         nome,
         custo,
         calibre,

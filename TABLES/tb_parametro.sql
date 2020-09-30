@@ -8,17 +8,12 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO
 
-CREATE PROCEDURE excluir_municao_por_id
-    @id_municao INT
-AS
-BEGIN
-	DELETE FROM [dbo].[tb_municao] 
-<<<<<<< HEAD
-    WHERE id_municao = @id_municao
-=======
-    WHERE id_municao = @id_municao;
->>>>>>> 1d8c3dea48adaa4673734661041462e560c7113d
-END;
-GO
+CREATE TABLE tb_parametro
+(
+  id_parametro INT NOT NULL,
+  nom_parametro VARCHAR(255) NOT NULL,
+  des_parametro VARCHAR(500) NOT NULL,
+  dat_atualizacao DATETIME NOT NULL,
+  PRIMARY KEY ( id_parametro )
+);

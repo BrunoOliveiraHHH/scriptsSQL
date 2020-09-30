@@ -10,15 +10,15 @@
 USE o_inicio_do_fim_v2;
 GO
 
-CREATE PROCEDURE excluir_municao_por_id
-    @id_municao INT
+CREATE PROCEDURE consultar_usuario
+@nome VARCHAR(255),
+@senha VARCHAR(255)
 AS
+
 BEGIN
-	DELETE FROM [dbo].[tb_municao] 
-<<<<<<< HEAD
-    WHERE id_municao = @id_municao
-=======
-    WHERE id_municao = @id_municao;
->>>>>>> 1d8c3dea48adaa4673734661041462e560c7113d
-END;
+    SELECT nome, 
+		   senha
+    FROM [dbo].[tb_usuario]
+    WHERE  nome = @nome and senha = @senha    
+END
 GO

@@ -11,10 +11,12 @@ USE o_inicio_do_fim_v2;
 GO
 
 CREATE PROCEDURE listar_nome_id_municao
+@id_municao int
 AS
 BEGIN
     SELECT id_municao,
             nome
-    FROM [dbo].[tb_municao];
+    FROM [dbo].[tb_municao]
+    WHERE id_municao = @id_municao
 END;
 GO
