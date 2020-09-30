@@ -10,7 +10,7 @@
 USE o_inicio_do_fim_v2;
 GO
 
-CREATE PROCEDURE consultar_parametro
+CREATE PROCEDURE inserir_parametros
 @nom_parametro VARCHAR(255),
 @des_parametro VARCHAR(500)
 AS

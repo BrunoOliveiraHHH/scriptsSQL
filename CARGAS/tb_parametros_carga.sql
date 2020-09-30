@@ -8,17 +8,6 @@
 */
 
 USE o_inicio_do_fim_v2;
-GO
 
-CREATE PROCEDURE consultar_usuario
-@nome VARCHAR(255),
-@senha VARCHAR(255)
-AS
-
-BEGIN
-    SELECT nome, 
-		   senha
-    FROM [dbo].[tb_usuario]
-    WHERE  nome = @nome and senha = @senha    
-END
-GO
+EXEC inserir_parametros 'procedureListarDurabilidade', 'EXECUTE [dbo].[listar_durabilidades]'
+EXEC inserir_parametros 'procedureConsultarUsuario', 'EXECUTE [dbo].[consultar_usuario]'
