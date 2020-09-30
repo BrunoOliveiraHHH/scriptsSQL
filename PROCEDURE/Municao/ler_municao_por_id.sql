@@ -8,8 +8,20 @@
 */
 
 USE o_inicio_do_fim_v2;
+GO
 
-INSERT INTO  tb_parametro
-	( id_acessorio , nom_parametro , des_parametro , dat_atualizacao )
-VALUES
-	(1, 'procedureListarDurabilidade', 'EXECUTE [dbo].[listar_durabilidades]', getDate())
+CREATE PROCEDURE ler_municao_por_id
+    @id_municao INT
+AS
+BEGIN
+	SELECT id_municao AS ID,
+        nome,
+        custo,
+        calibre,
+        quantidade,
+        peso,
+        observacao
+    FROM [dbo].[tb_municao]
+	WHERE id_municao = @id_municao;
+END;
+GO

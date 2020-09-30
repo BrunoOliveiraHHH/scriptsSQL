@@ -10,15 +10,11 @@
 USE o_inicio_do_fim_v2;
 GO
 
-CREATE PROCEDURE excluir_municao_por_id
-    @id_municao INT
+CREATE PROCEDURE excluir_veiculo_por_id
+    @id_veiculo INT
 AS
 BEGIN
-	DELETE FROM [dbo].[tb_municao] 
-<<<<<<< HEAD
-    WHERE id_municao = @id_municao
-=======
-    WHERE id_municao = @id_municao;
->>>>>>> 1d8c3dea48adaa4673734661041462e560c7113d
+	DELETE FROM [dbo].[tb_veiculo] 
+    WHERE id_veiculo = @id_veiculo;
 END;
 GO
