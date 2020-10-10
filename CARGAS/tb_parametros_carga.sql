@@ -11,8 +11,10 @@ USE o_inicio_do_fim_v2;
 
 EXEC inserir_parametros 'procedureListarDurabilidade', 'EXECUTE [dbo].[listar_durabilidades]';
 EXEC inserir_parametros 'procedureConsultarUsuario', 'EXECUTE [dbo].[consultar_usuario]';
-EXEC inserir_parametros 'ListaBtnMenu','ArmaMuniOFF';
-EXEC inserir_parametros 'ListaBtnMenu','ArmaduraOFF';
-EXEC inserir_parametros 'ListaBtnMenu','VeiculoOFF';
-EXEC inserir_parametros 'ListaBtnMenu','ItemOFF';
-EXEC inserir_parametros 'ListaBtnMenu','MonstroOFF';
+EXEC inserir_parametros 'ListaBtnMenu','ArmaMuniON';
+EXEC inserir_parametros 'ListaBtnMenu','ArmaduraON';
+EXEC inserir_parametros 'ListaBtnMenu','VeiculoON';
+EXEC inserir_parametros 'ListaBtnMenu','ItemON';
+EXEC inserir_parametros 'ListaBtnMenu','MonstroON';
+EXEC inserir_parametros 'procedureConsultaArmaMunicao', 'EXECUTE [dbo].[consulta_arma_municao]';
+EXEC inserir_parametros 'procedureListaMuniIdNome', 'EXECUTE [dbo].[listar_nome_id_municao]';
