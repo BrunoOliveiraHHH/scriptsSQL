@@ -19,6 +19,7 @@ CREATE TABLE tb_arma
   peso VARCHAR(255) NOT NULL,
   propriedade VARCHAR(255) NOT NULL,
   municao INT NOT NULL,
+  durabilidade INT NOT NULL,
   observacao VARCHAR(255) NOT NULL,
   PRIMARY KEY ( id_arma )
 );
@@ -28,3 +29,8 @@ ALTER TABLE tb_arma
 	ADD CONSTRAINT fk_municao_arma 
     FOREIGN KEY (municao) 
     REFERENCES tb_municao (id_municao) ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE tb_arma
+	ADD CONSTRAINT fk_durabilidade_arma
+    FOREIGN KEY (durabilidade) 
+    REFERENCES tb_durabilidade (id_durabilidade) ON UPDATE CASCADE ON DELETE CASCADE;
