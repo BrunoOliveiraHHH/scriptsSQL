@@ -25,8 +25,10 @@ BEGIN
 		muni.calibre as calibre_municao,
 		muni.quantidade as quantidade_municao,
 		muni.observacao as observacao_municao,
+		dub.descricao as durabiliade_arma,
 		arm.observacao as observacao_arma
 	FROM [dbo].[tb_arma] AS arm
-		INNER JOIN [dbo].[tb_municao] AS muni ON arm.municao = muni.id_municao;
+		INNER JOIN [dbo].[tb_municao] AS muni ON arm.municao = muni.id_municao
+		INNER JOIN [dbo].[tb_durabilidade] AS dub ON arm.durabilidade = dub.id_durabilidade;
 END;
 GO
