@@ -40,7 +40,7 @@ VALUES
     GO
 
     INSERT INTO  tb_arma
-	( id_arma, nome, custo, dano, tipo_de_dano, peso, propriedade, municao, observacao)
+	( id_arma, nome, custo, dano, tipo_de_dano, peso, propriedade, municao, durabilidade, observacao)
 VALUES
 	(1, 'Besta MK150A1PB de 150 lb', 200, '1d10', 'Perfurante', '2 Kg', 'Munição (alc. 24/120 quad.)', 1, 1,'Armas Pequenas'),
 	(2, 'Smith & Wesson Centennial .22', 300, '2d6', 'balístico', '1 Kg', 'Munição (.22) ( alc. 16/80 quad.), Recarregar (6), Semiautomático', 2, 1,'Armas Pequenas'),
@@ -223,3 +223,4 @@ EXEC inserir_parametros 'ListaBtnMenu','ItemON';
 EXEC inserir_parametros 'ListaBtnMenu','MonstroON';
 EXEC inserir_parametros 'procedureConsultaArmaMunicao', 'EXECUTE [dbo].[consulta_arma_municao]';
 EXEC inserir_parametros 'procedureListaMuniIdNome', 'EXECUTE [dbo].[listar_nome_id_municao]';
+EXEC inserir_parametros 'procedureAdicionarArma','EXECUTE [dbo].[adiciona_arma]';
