@@ -11,7 +11,7 @@ USE o_inicio_do_fim_v2;
 
 CREATE TABLE tb_arma
 (
-  id_arma INT NOT NULL,
+  id_arma INT IDENTITY(1,1) NOT NULL,
   nome VARCHAR(255) NOT NULL,
   custo INT NOT NULL,
   dano VARCHAR(255) NOT NULL,

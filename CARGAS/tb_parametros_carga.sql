@@ -19,3 +19,5 @@ EXEC inserir_parametros 'ListaBtnMenu','MonstroON';
 EXEC inserir_parametros 'procedureConsultaArmaMunicao', 'EXECUTE [dbo].[consulta_arma_municao]';
 EXEC inserir_parametros 'procedureListaMuniIdNome', 'EXECUTE [dbo].[listar_nome_id_municao]';
 EXEC inserir_parametros 'procedureAdicionarArma','EXECUTE [dbo].[adiciona_arma]';
+EXEC inserir_parametros 'procedureExcluirArma','EXECUTE [dbo].[excluir_arma_por_id]';
+EXEC inserir_parametros 'procedurePesquisarArma','EXECUTE [dbo].[ler_arma_por_id]';
